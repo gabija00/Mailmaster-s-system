@@ -16,5 +16,7 @@ namespace WebApplication11.Models
 
         public int id_Kurjeris { get; set; }
         public string kurjeris { get; set; }
+
+        public List<Workaday> darboDienos { get; set; }
     }
 }

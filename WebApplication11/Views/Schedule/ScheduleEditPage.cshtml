@@ -10,12 +10,12 @@
 @Html.AntiForgeryToken()
 
                 <fieldset>
-                    <legend>Tvarkarastis</legend>
+                    <legend>Paštomatas</legend>
                     <div class="form-horizontal">
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                         <div class="form-group">
-                            @Html.DisplayNameFor(model => model.kurjeris)
+                            @Html.DisplayNameFor(model => model.darboRajonas)
                             <br />
                             @Model.kurjeris
                         </div>
@@ -28,13 +28,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.darboRajonas, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.darboRajonas, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.darboRajonas, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
+
+                        @Html.ActionLink("Prideti diena", "ScheduleEditPage", new { id = Model.idTvarkarastis }, new { @class = "btn btn-primary action" })
+
 
 
                         <div class="form-group">

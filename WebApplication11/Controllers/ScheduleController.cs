@@ -8,6 +8,19 @@ using MySqlConnector;
 
 namespace WebApplication11.Controllers
 {
+    /*Kai sukuriam tvarkarastyje diena, automatiskai turi buti sukurtas ir kelias kuris susideda is bent vienos atkarpos
+         * atkarpa randama suradus atsuma db atitinkanti ieskoma atstuma tarp dvieju pastomatu
+         * 
+         * atstumai i db suvesti rankiniu budu
+         * 
+         *tvarkarasciui priklauso darbo diena
+         * darbo dienai priklauso kelias
+         * o keliui priklauso atkarpa
+         * 
+         * edite bus galima prideti pastomata prie dienos
+         * sukuriant diena reikes prideti bent viena pastomata
+                
+         */
     public class ScheduleController : Controller
     {
         List<DeliveryMan> deliveryMen = new List<DeliveryMan>();
@@ -108,5 +121,27 @@ namespace WebApplication11.Controllers
 
 
         }
+
+        public void FindOptimalCourse()
+        {
+            //reiks listo visu priskirtu kurjeriui pastomatu saraso
+            //pasirinkti pirma sarase esanti pastomata
+            //*teks perrasyti optimalaus kelio paieskos diagrama
+
+        }
+
+        /*Kai sukuriam tvarkarastyje diena, automatiskai turi buti sukurtas ir kelias kuris susideda is bent vienos atkarpos
+         * atkarpa randama suradus atsuma db atitinkanti ieskoma atstuma tarp dvieju pastomatu
+         * 
+         * atstumai i db suvesti rankiniu budu
+         * 
+         *tvarkarasciui priklauso darbo diena
+         * darbo dienai priklauso kelias
+         * o keliui priklauso atkarpa
+         * 
+         * edite bus galima prideti pastomata prie dienos
+         * sukuriant diena reikes prideti bent viena pastomata
+                
+         */
     }
 }
