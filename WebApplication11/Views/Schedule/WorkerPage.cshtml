@@ -1,0 +1,36 @@
+﻿@model List<DeliveryMan>
+@{
+    ViewData["Title"] = "Kurjeriu sarasas";
+}
+
+<div class="text-center">
+    
+
+</div>
+
+<h2>Kurjeriai</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Prisijungimo vardas</th>
+            <th>Telefono Numeris</th>
+            <th>El. Pastas</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.prisijungimoVardas</td>
+                <td>@item.telNr</td>
+                <td>@item.ePastas</td>
+                <td>
+                    @Html.ActionLink("Tvarkarastis", "ScheduleEditPage", new { id = item.id }, new { @class = "btn btn-primary action" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
